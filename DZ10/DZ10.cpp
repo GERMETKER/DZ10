@@ -3,8 +3,10 @@
 #include <random>
 #include <cstdlib>
 template <typename T1, typename T2, typename T3>
+//Сортировка методом пузырька
 void Yb(T1 arr[], T2 size, T3 srow)
 {
+	//Сортировка методом пузырька
 	/*
 	for (int i = 0; i < size - 1; i++)
 	{
@@ -28,16 +30,16 @@ void Yb(T1 arr[], T2 size, T3 srow)
 		Yb(arr, size, srow);
 	}
 	*/
-	int temp = 0;
+	int numb = 0;
 	for (int i = 0; i < size - 1; i++) 
 	{
 		for (int j = 0; j < size - i - 1; j++) 
 		{
 			if (arr[j] < arr[j + 1]) 
 			{
-				temp = arr[j];
+				numb = arr[j];
 				arr[j] = arr[j + 1];
-				arr[j + 1] = temp;
+				arr[j + 1] = numb;
 			}
 		}
 	}
@@ -49,6 +51,7 @@ void Yb(T1 arr[], T2 size, T3 srow)
 template <typename T1, typename T2, typename T3>
 void Vozr(T1 arr[], T2 size, T3 srow)
 {
+	//Сортировка методом пузырька
 	/*
 	for (int i = 0; i < size - 1; i++)
 	{
@@ -72,16 +75,16 @@ void Vozr(T1 arr[], T2 size, T3 srow)
 		Vozr(arr, size, srow);
 	}
 	*/
-	int temp = 0;
+	int numb = 0;
 	for (int i = 0; i < size - 1; i++)
 	{
 		for (int j = 0; j < size - i - 1; j++)
 		{
 			if (arr[j] > arr[j + 1])
 			{
-				temp = arr[j];
+				numb = arr[j];
 				arr[j] = arr[j + 1];
-				arr[j + 1] = temp;
+				arr[j + 1] = numb;
 			}
 		}
 	}
@@ -95,6 +98,7 @@ void Vozr(T1 arr[], T2 size, T3 srow)
 template <typename T1, typename T2, typename T3>
 void Sum(T1 arr[], T2 size, T3 srow)
 {
+	//Сортировка методом пузырька
 	int answ;
 	std::cout << "Выберите как хотите заполнить массив(1 - заполнить случайными числами, 2 - заполнить самостоятельно)\n";
 	std::cin >> answ;
@@ -142,6 +146,7 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	srand(time(NULL));
+	//Сортировка методом пузырька
 	const int size = 10;
 	int arr[size];
 	bool srow = true;
